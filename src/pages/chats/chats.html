@@ -1,0 +1,65 @@
+<ion-header>
+
+
+  <ion-navbar color="mycolor">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button (click)="logOut()"  color="yellowish" clear  ><ion-icon name="power" ></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <h3 align="center" style="color:#fff3e0; font-weight: 100; padding: 0px; margin-top: 5px;" >
+            Chats
+          </h3>
+
+
+        </ion-col>
+
+        <ion-col>
+          <button ion-button (click)="addFriend()"  color="yellowish" clear ><span style="color:#fb9996">&&&&&&</span><ion-icon name="person-add" ></ion-icon></button>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-list-header style="color: #c5c5c5">
+      Requests
+    </ion-list-header>
+    <ion-item-sliding *ngFor="let item of myrequests">
+      <ion-item>
+          <ion-avatar item-left>
+          <img src="{{item.photoURL}}">
+          </ion-avatar>
+          <h4>{{item.displayName}}</h4>
+          </ion-item>
+      <ion-item-options>
+        <button ion-button color="secondary" (click)="accept(item)">
+          <ion-icon name="checkmark"></ion-icon>
+        </button>
+        <button ion-button color="danger" (click)="ignore(item)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-list-header style="color: #c5c5c5">
+      Friends
+    </ion-list-header>
+    <ion-item *ngFor="let item of myfriends" (click) = "friendchat(item)">
+      <ion-avatar item-left>
+        <img src="{{item.photoURL}}">
+        <h3>{{item.displayName}}</h3>
+      </ion-avatar>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

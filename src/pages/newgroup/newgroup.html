@@ -1,0 +1,68 @@
+<!--
+  Generated template for the NewgroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!--
+<ion-header>
+
+  <ion-navbar color="mycolor">
+    <h3 align="center" style="color:#fff3e0; font-weight: 100; padding: 0px; margin-top: 5px;" >
+      New Group
+    </h3>
+  </ion-navbar>
+
+</ion-header>
+
+-->
+
+<ion-header>
+  <ion-navbar color="mycolor">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button (click)="odiNazad()"  color="yellowish" clear  ><ion-icon name="ion-arrow-left-c" ></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <h3 align="center" style="color:#fff3e0; font-weight: 100; padding: 0px; margin-top: 5px;" >
+            New<span style="color: #fb9996 ;">_</span>Group
+          </h3>
+
+
+        </ion-col>
+
+        <ion-col>
+          <button ion-button color="mycolor" clear ><span style="color:#fb9996">&&&&&&</span><ion-icon name="contacts" ></ion-icon></button>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+
+
+
+<ion-content>
+  <div class="profile-image" (click)="chooseimage()">
+    <img src="{{newgroup.groupPic}}">
+  </div>
+  <div>
+    <h2 (click)="editgroupname()" style="color:#fb9996">{{newgroup.groupName}}</h2>
+  </div>
+  <div style="color: #fb9996;">
+    Tap on the pic or group name to change it.
+  </div>
+  <div class="spacer" style="height: 10px;"></div>
+  <div>
+    <button ion-button round outline color="mycolor" (click)="creategroup()">Create</button>
+  </div>
+</ion-content>

@@ -1,0 +1,39 @@
+
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile Picture</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="profile-image">
+   <!--<img src="{{imgurl}}">-->
+    <img src="{{captureDataUrl}}" *ngIf="captureDataUrl"/>
+
+  </div>
+
+  <div>
+    <button ion-button (click)="capture()">Capture</button> <!--pickImage   chooose image-->
+  </div>
+
+  <div>
+  <!--[hidden]="!moveon"-->
+    <button ion-button (click)="uploadpic()">upload</button> <!--proceed()  skip this step-->
+  </div>
+
+  <div [hidden]="moveon">
+    <button ion-button (click)="uploadandperceed()">Upload and proceed</button>
+  </div>
+
+</ion-content>
+<!--
+<ion-content padding>
+  <button ion-button color="primary" (click)="accessGallery()">Open Gallery</button>
+  <img [src]="base64Image" *ngIf="base64Image" />
+</ion-content>-->

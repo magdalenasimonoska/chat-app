@@ -1,0 +1,25 @@
+
+
+
+<ion-content padding>
+  <div style="margin-top:30px; padding: 0px; " class="center">
+    <img src="assets/chat.jpg">
+  </div>
+  <ion-list>
+
+    <ion-item>
+
+      <ion-input type="email" placeholder="Email"[(ngModel)]="credentials.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input type="password" placeholder="Password" [(ngModel)]="credentials.password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <a (click)="passwordReset()" style="color: #c5c5c5" class="center"> Forgot login details? <b>Get help</b></a>
+  <button ion-button (click)="signIn()" full color="mycolor" style="text-transform: lowercase;"><span style="text-transform: uppercase;">L</span>og in</button>
+  <p style="color: #c5c5c5; margin: 0px; padding: 5px;" class="center">OR</p>
+  <button ion-button (click)="signUp()" full color="mycolor"  style="text-transform: lowercase;"><span style="text-transform: uppercase;">S</span>ign Up</button>
+</ion-content>

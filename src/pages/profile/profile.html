@@ -1,0 +1,44 @@
+<ion-header>
+
+
+  <ion-navbar color="mycolor">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button (click)="logOut()"  color="yellowish" clear  ><ion-icon name="power" ></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <h3 align="center" style="color:#fff3e0; font-weight: 100; padding: 0px; margin-top: 5px;" >
+            Profile
+          </h3>
+
+
+        </ion-col>
+
+        <ion-col>
+          <button ion-button (click)="addFriend()"  color="yellowish" clear ><span style="color:#fb9996">&&&&&&</span><ion-icon name="person-add" ></ion-icon></button>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="profile-image">
+    <img (click)='editImage()' src="{{avatar}}">
+  </div>
+
+  <div>
+    <h2 (click)="editName()" style="color: #fb9996;">{{displayName}}</h2>
+  </div>
+  <div style="color: #fb9996;">
+     Tap on your picture or name to change it
+  </div>
+
+</ion-content>

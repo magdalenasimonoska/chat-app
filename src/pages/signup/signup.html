@@ -1,0 +1,41 @@
+<ion-content padding>
+  <div style="margin-top:30px; padding: 0px; " class="center">
+    <img src="assets/chat.jpg">
+  </div>
+  <form [formGroup]="signup">
+
+    <ion-item style="border: 1px solid #c5c5c5; border-radius: 5px; margin-top: 20px; ">
+      <ion-input type="email" placeholder="Email" style="font-size: 14px;" [(ngModel)]="newUser.email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item style="border: 1px solid #c5c5c5; border-radius: 5px; margin-top: 20px; margin-bottom: 20px; ">
+      <ion-input type="password" placeholder="Password" style="font-size: 14px;" [(ngModel)]="newUser.password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-item style="border: 1px solid #c5c5c5; border-radius: 5px; margin-top: 20px; margin-bottom: 20px; ">
+      <ion-input type="text" placeholder="Name" style="font-size: 14px;" [(ngModel)]="newUser.displayName" formControlName="password"></ion-input>
+    </ion-item>
+
+
+  </form>
+
+
+    <button ion-button full color="mycolor" style="text-transform: lowercase; " (click)="signUp()" [disabled]="!signup.valid" >
+      <span style="text-transform: capitalize">S</span>ign up
+    </button>
+
+</ion-content>
+
+<ion-footer >
+  <div style="text-align: center">
+
+    <button ion-button clear (click)="logIn()" style="text-transform: lowercase; " color="greyCol" >
+
+      <span style="text-transform: capitalize;">A</span>lready have an account?
+      <strong><span style="text-transform: capitalize;">&nbsp;L</span>og in.</strong>
+
+    </button>
+
+
+  </div>
+</ion-footer>
